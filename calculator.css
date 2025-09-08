@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Small gap between buttons */
+    background-color: #ccc; /* To make the gaps visible */
+}
+
+.btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #d0d0d0;
+}
+
+.btn.operator {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.btn.operator:hover {
+    background-color: #e67e22;
+}
+
+.btn.equal-sign {
+    background-color: #27ae60;
+    color: #fff;
+    grid-column: span 1;
+}
+
+.btn.equal-sign:hover {
+    background-color: #2ecc71;
+}
+
+.btn.clear {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn.clear:hover {
+    background-color: #c0392b;
+}
+
+/* New style for function buttons */
+.btn.function {
+    background-color: #7f8c8d; /* A neutral gray */
+    color: #fff;
+}
+
+.btn.function:hover {
+    background-color: #95a5a6;
+}
+
+/* Make the '0' button span two columns */
+.btn[value="0"] {
+    grid-column: span 2;
+}
